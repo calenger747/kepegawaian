@@ -34,6 +34,10 @@
     $p_divisi       = $a_data_edit['divisi'];
     $p_npwp         = $a_data_edit['no_npwp']; 
     $p_tgl_masuk    = $a_data_edit['tgl_masuk'];
+    $p_tgl_mulai_kontrak_1 = $a_data_edit['tgl_mulai_kontrak_1'];
+	$p_tgl_selesai_kontrak_1 = $a_data_edit['tgl_selesai_kontrak_1'];
+	$p_tgl_mulai_kontrak_2 = $a_data_edit['tgl_mulai_kontrak_2'];
+	$p_tgl_selesai_kontrak_2 = $a_data_edit['tgl_selesai_kontrak_2'];
     $p_no_telp      = $a_data_edit['telp']; 
     $p_no_hp        = $a_data_edit['hp'];
     $p_status_peg   = $a_data_edit['status_peg']; 
@@ -315,6 +319,42 @@
                                                     </div>
                                             </div>
                                           </div>
+                                          <div class="form-group">
+                                              <label class="control-label">Tanggal Mulai Kontrak 1</label>
+                                              <div class="input-group">
+                                                <input type="text" name="tgl_mulai_kontrak_1" class="form-control" id="datepicker-autoclose4" date-format="yyyy-MM-dd" placeholder="yyyy-mm-dd" value="<?php echo $p_tgl_mulai_kontrak_1; ?>">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label class="control-label">Tanggal Selesai Kontrak 1</label>
+                                              <div class="input-group">
+                                                <input type="text" name="tgl_selesai_kontrak_1" class="form-control" id="datepicker-autoclose5" date-format="yyyy-MM-dd" placeholder="yyyy-mm-dd" value="<?php echo $p_tgl_selesai_kontrak_1; ?>">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label class="control-label">Tanggal Mulai Kontrak 2</label>
+                                              <div class="input-group">
+                                                <input type="text" name="tgl_mulai_kontrak_2" class="form-control" id="datepicker-autoclose6" date-format="yyyy-MM-dd" placeholder="yyyy-mm-dd" value="<?php echo $p_tgl_mulai_kontrak_2; ?>">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label class="control-label">Tanggal Selesai Kontrak 2</label>
+                                              <div class="input-group">
+                                                <input type="text" name="tgl_selesai_kontrak_2" class="form-control" id="datepicker-autoclose7" date-format="yyyy-MM-dd" placeholder="yyyy-mm-dd" value="<?php echo $p_tgl_selesai_kontrak_2; ?>">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                            </div>
+                                          </div>          
                                           <div class="form-action">
                                               <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
                                           </div>
@@ -481,6 +521,26 @@
             autoclose: true,
             viewMode: "years", 
             minViewMode: "years"
+        });
+        jQuery('#datepicker-autoclose4').datepicker({
+            format: "yyyy-mm-dd",
+            autoclose: true,
+            todayHighlight: true
+        });
+        jQuery('#datepicker-autoclose5').datepicker({
+            format: "yyyy-mm-dd",
+            autoclose: true,
+            todayHighlight: true
+        });
+        jQuery('#datepicker-autoclose6').datepicker({
+            format: "yyyy-mm-dd",
+            autoclose: true,
+            todayHighlight: true
+        });
+        jQuery('#datepicker-autoclose7').datepicker({
+            format: "yyyy-mm-dd",
+            autoclose: true,
+            todayHighlight: true
         });
         var quill = new Quill('#editor', {
             theme: 'snow'

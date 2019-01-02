@@ -5,12 +5,11 @@
     $(".international-inputmask").inputmask("+9(999)999-9999"),
     $(".indonesia-inputmask").inputmask("+99 999 9999 9999"), 
     $(".xphone-inputmask").inputmask("(999) 999-9999 / x999999"), 
-    $(".purchase-inputmask").inputmask("aaaa 9999-****"),
-    $(".purchase-inputmask1").inputmask("9.999.999.999"), 
+    $(".purchase-inputmask").inputmask("aaaa 9999-****"), 
     $(".cc-inputmask").inputmask("9999 9999 9999 9999"), 
     $(".ssn-inputmask").inputmask("999-99-9999"), 
     $(".isbn-inputmask").inputmask("999-99-999-9999-9"), 
-    $(".currency-inputmask").inputmask("Rp. 999.999,99"), 
+    $(".currency-inputmask").inputmask("$9999"), 
     $(".percentage-inputmask").inputmask("99%"), 
     $(".decimal-inputmask").inputmask({
         alias: "decimal"

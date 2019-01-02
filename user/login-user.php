@@ -19,19 +19,28 @@ if ($ketemu > 0){
   $_SESSION['leveluser']    = $r['level_user'];
   $_SESSION['status']    = $r['status'];
   $_SESSION['w_login']    = $r['w_login'];
-  $id_user=$_SESSION['kode'];	
-  
-  
-  
+  $id_user=$_SESSION['kode'];
+
+
+
   if($_SESSION['leveluser'] == 'SUPER ADMIN'){
-	echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
-	mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
+	  echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
+	  mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
   } else if($_SESSION['leveluser'] == 'ADMIN'){
-      echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
-	mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
-  } if($_SESSION['leveluser'] == 'USER'){
-        echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
-	mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
+    echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
+	  mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
+  } else if($_SESSION['leveluser'] == 'ADMIN TEKNIS'){
+    echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
+    mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
+  } else if($_SESSION['leveluser'] == 'ADMIN FINANCE'){
+    echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
+    mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
+  } else if($_SESSION['leveluser'] == 'USER'){
+    echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
+	  mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
+  } else if($_SESSION['leveluser'] == 'ADMIN GUDANG'){
+    echo "<script>window.location ='../?view=halaman-utama&id=9973838hupa&name=pegaaplication&dashboard&status=11'</script>";
+	  mysqli_query($connect, "update tbl_user_lr set status='1', w_login=NOW() where id='$id_user'");
   }
 }
 else{

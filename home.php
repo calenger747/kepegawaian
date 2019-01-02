@@ -8,7 +8,13 @@
                                 include('_nav/button-admin-super.php');
                             } elseif ($_SESSION['leveluser'] == 'ADMIN') {
                                 include('_nav/button-admin-super.php');
+                            } elseif ($_SESSION['leveluser'] == 'ADMIN TEKNIS') {
+                                include('_nav/button-user.php');
+                            } elseif ($_SESSION['leveluser'] == 'ADMIN FINANCE') {
+                                include('_nav/button-user.php');
                             } elseif ($_SESSION['leveluser'] == 'USER') {
+                                include('_nav/button-user.php');
+                            } elseif ($_SESSION['leveluser'] == 'ADMIN GUDANG') {
                                 include('_nav/button-user.php');
                             }
 
@@ -27,8 +33,8 @@
                                 <?php
 
                                     $view = mysqli_query($connect, "SELECT * FROM tbl_news ORDER BY tanggal DESC LIMIT 5");
-                                                    
-                                    while ($row = mysqli_fetch_array($view)) {        
+
+                                    while ($row = mysqli_fetch_array($view)) {
                                 ?>
                                 <li class="d-flex no-block card-body border-top">
                                     <i class="mdi mdi-newspaper w-30px m-t-5"></i>

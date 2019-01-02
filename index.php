@@ -2,11 +2,11 @@
 <html lang="en">
 
 <?php include('config_config_cs/fungsi_ambil_halaman.php'); ?>
-<?php 
+<?php
     $nip=$_SESSION['nip'];
     $level = $_SESSION['leveluser'];
     $sesi_nip = isset($_SESSION['nip']) ? $_SESSION['nip'] : NULL;
-    if ($_SESSION['leveluser']=='ADMIN' ||$_SESSION['leveluser']=='SUPER ADMIN' ||$_SESSION['leveluser']=='USER') {
+    if ($_SESSION['leveluser']=='ADMIN' ||$_SESSION['leveluser']=='SUPER ADMIN' ||$_SESSION['leveluser']=='USER'||$_SESSION['leveluser']=='ADMIN TEKNIS' ||$_SESSION['leveluser']=='ADMIN FINANCE' ||$_SESSION['leveluser']=='ADMIN GUDANG') {
 ?>
 <head>
     <meta charset="utf-8">
@@ -72,21 +72,21 @@
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
                             <img src="assets/images/logo-icon.png" alt="homepage" class="light-logo" />
-                           
+
                         </b>
                         <!--End Logo icon -->
                          <!-- Logo text -->
                         <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="assets/images/Logo-text.png" alt="homepage" class="light-logo" />
-                            
+                             <img src="assets/images/logo-text.png" alt="homepage" class="light-logo" />
+
                         </span>
                         <!-- Logo icon -->
                         <!-- <b class="logo-icon"> -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
                             <!-- <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
-                            
+
                         <!-- </b> -->
                         <!--End Logo icon -->
                     </a>
@@ -157,8 +157,14 @@
                                 include('_nav/nav-admin-super.php');
                             } elseif ($_SESSION['leveluser'] == 'ADMIN') {
                                 include('_nav/nav-admin-super.php');
+                            } elseif ($_SESSION['leveluser'] == 'ADMIN TEKNIS') {
+                                include('_nav/nav-admin.php');
+                            } elseif ($_SESSION['leveluser'] == 'ADMIN FINANCE') {
+                                include('_nav/nav-admin.php');
                             } elseif ($_SESSION['leveluser'] == 'USER') {
                                 include('_nav/nav-user.php');
+                            } elseif ($_SESSION['leveluser'] == 'ADMIN GUDANG') {
+                                include('_nav/nav-admin.php');
                             }
 
                         ?>
@@ -256,6 +262,6 @@
     <script type="text/javascript">
         window.location="?view=login&id=9973801hupa&name=pegaaplication&Silahkan Login";
     </script>
-<?php     
+<?php
     }
 ?>

@@ -83,6 +83,10 @@
                             $p_divisi       = $a_data_edit['nama_divisi'];
                             $p_npwp         = $a_data_edit['no_npwp']; 
                             $p_tgl_masuk    = $a_data_edit['tgl_masuk'];
+                            $p_tgl_mulai_kontrak_1 = $a_data_edit['tgl_mulai_kontrak_1'];
+                            $p_tgl_selesai_kontrak_1 = $a_data_edit['tgl_selesai_kontrak_1'];
+                            $p_tgl_mulai_kontrak_2 = $a_data_edit['tgl_mulai_kontrak_2'];
+                            $p_tgl_selesai_kontrak_2 = $a_data_edit['tgl_selesai_kontrak_2'];
                             $p_no_telp      = $a_data_edit['telp']; 
                             $p_no_hp        = $a_data_edit['hp'];
                             $p_status_peg   = $a_data_edit['nama_status']; 
@@ -163,6 +167,10 @@
                                                       <i class="mdi mdi-phone user-profile-icon"></i>
                                                       <a href="#"> <?php echo $p_no_hp; ?></a>
                                                     </li><br>
+                                                    <li class="m-top-xs">
+                                                        <i class="mdi mdi-calendar user-profile-icon"></i>
+                                                        <a href="#"> <?php echo tgl_indo($p_tgl_masuk); ?></a>
+                                                    </li><br>
                                                   </ul>
                                                   <center>
                                                       <a href="?view=edit-pegawai&id=997386799hupa&name=pegaaplication&editPegawai&nip=<?php echo $p_nip;?>" class="btn btn-outline-success" data-toggle="tooltip" title="Edit Data"><span class="fa fa-edit"></span></a>
@@ -220,6 +228,30 @@
                                                     <div class="tetx-right">
                                                        <button type='button' class='close' data-dismiss='alert'><i class='ace-icon fa fa-times'></i>
                                                        </button> 
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex no-block card-body border-top alert">
+                                                <div>
+                                                    <a href="#" class="m-b-0 font-medium p-0"> <?php echo tgl_indo($p_tgl_mulai_kontrak_1); ?> - <?php echo tgl_indo($p_tgl_selesai_kontrak_1); ?></a>
+                                                    <span class="text-muted">Tanggal Mulai Kontrak 1 - Tanggal Selesai Kontrak 1</span>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div class="tetx-right">
+                                                        <button type='button' class='close' data-dismiss='alert'><i class='ace-icon fa fa-times'></i>
+                                                        </button> 
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex no-block card-body border-top alert">
+                                                <div>
+                                                    <a href="#" class="m-b-0 font-medium p-0"> <?php echo tgl_indo($p_tgl_mulai_kontrak_2); ?> - <?php echo tgl_indo($p_tgl_selesai_kontrak_2); ?></a>
+                                                    <span class="text-muted">Tanggal Mulai Kontrak 2 - Tanggal Selesai Kontrak 2</span>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div class="tetx-right">
+                                                        <button type='button' class='close' data-dismiss='alert'><i class='ace-icon fa fa-times'></i>
+                                                        </button> 
                                                     </div>
                                                 </div>
                                             </li>

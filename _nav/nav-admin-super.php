@@ -9,6 +9,7 @@
                                 <li class="sidebar-item"><a href="?view=status-pegawai&id=9973846hupa&name=pegaaplication&statusPegawai" class="sidebar-link"><i class="mdi mdi-contacts"></i><span class="hide-menu"> Status Pegawai </span></a></li>
                                 <li class="sidebar-item"><a href="?view=email-pegawai&id=9973848hupa&name=pegaaplication&emailPegawai" class="sidebar-link"><i class="mdi mdi-email"></i><span class="hide-menu"> Email Pegawai </span></a></li>
                                 <li class="sidebar-item"><a href="?view=bank&id=9973849hupa&name=pegaaplication&bank" class="sidebar-link"><i class="mdi mdi-credit-card"></i><span class="hide-menu"> Bank Transfer </span></a></li>
+                                <li class="sidebar-item"><a href="?view=lokasi&id=9973849hupa&name=pegaaplication&lokasi" class="sidebar-link"><i class="fas fa-location-arrow"></i><span class="hide-menu"> Lokasi </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-clipboard-account"></i><span class="hide-menu">Pegawai </span></a>
@@ -36,6 +37,14 @@
                                 <li class="sidebar-item"><a href="?view=pinjaman&id=9973857hupa&name=pegaaplication&pinjaman" class="sidebar-link"><i class="mdi mdi-credit-card-plus"></i><span class="hide-menu"> Pinjaman </span></a></li>
                                 <li class="sidebar-item"><a href="?view=potongan&id=9973858hupa&name=pegaaplication&potongan" class="sidebar-link"><i class="mdi mdi-credit-card-off"></i><span class="hide-menu"> Potongan </span></a></li>
                                 <li class="sidebar-item"><a href="?view=check-out&id=9973859hupa&name=pegaaplication&prosesPayroll" class="sidebar-link"><i class="mdi mdi-cash-multiple"></i><span class="hide-menu"> Proses Payroll </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-briefcase"></i><span class="hide-menu">Inventory </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="?view=inventory-barang&id=9973861hupa&name=pegaaplication&Inventory" class="sidebar-link"><i class="mdi mdi-briefcase"></i><span class="hide-menu"> Inventory Barang </span></a></li>
+                                <li class="sidebar-item"><a href="?view=pengajuan-inventory-barang&id=9973861hupa&name=pegaaplication&pengajuanInventory" class="sidebar-link"><i class="mdi mdi-briefcase-check"></i><span class="hide-menu"> Pengajuan Inventori Barang </span></a></li>
+                                <li class="sidebar-item"><a href="?view=peminjaman-barang&id=9973861hupa&name=pegaaplication&peminjamanBarang" class="sidebar-link"><i class="fas fa-briefcase-medical"></i><span class="hide-menu"> Peminjaman Barang </span></a></li>
+
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-bookmark"></i><span class="hide-menu">More Pages </span></a>

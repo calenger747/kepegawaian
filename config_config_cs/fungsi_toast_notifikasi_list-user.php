@@ -65,6 +65,22 @@
                     });
                 </script>
                 ";
+            } elseif ($ambil == 9) {
+                echo "
+                <script>
+                    $(document).ready(function(){
+                        toastr.success('Success!', 'USER BERHASIL DI HAPUS');
+                    });
+                </script>
+                ";
+            } elseif ($ambil == 10) {
+                echo "
+                <script>
+                    $(document).ready(function(){
+                        toastr.error('Error!', 'USER GAGAL DI HAPUS');
+                    });
+                </script>
+                ";
             } else{
                 echo "
                 <script>
@@ -73,7 +89,7 @@
                     });
                 </script>
                 ";
-            }
+            } 
 
         }
     ?> 

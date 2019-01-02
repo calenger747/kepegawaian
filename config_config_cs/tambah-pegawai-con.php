@@ -31,6 +31,10 @@
 		$p_divisi	 	= $_POST['divisi'];
 		$p_npwp		 	= $_POST['npwp'];	
 		$p_tgl_masuk 	= $_POST['tgl_masuk'];
+		$p_tgl_mulai_kontrak_1 = $_POST['tgl_mulai_kontrak_1'];
+		$p_tgl_selesai_kontrak_1 = $_POST['tgl_selesai_kontrak_1'];
+		$p_tgl_mulai_kontrak_2 = $_POST['tgl_mulai_kontrak_2'];
+		$p_tgl_selesai_kontrak_2 = $_POST['tgl_selesai_kontrak_2'];
 		$p_no_telp	 	= $_POST['telp'];	
 		$p_no_hp	 	= $_POST['nohp'];
 		$p_status_peg 	= $_POST['status_pegawai'];	
@@ -55,7 +59,7 @@
 
 						$q_tambah_alamat	= mysqli_query($connect, "INSERT INTO tbl_alamat VALUES ('$p_id_alamat','$p_nama_jalan','$p_rt','$p_rw','$p_kelurahan','$p_kecamatan','$p_kota','$p_provinsi','$p_kode_pos')");
 
-						$q_tambah_jabatan 	= mysqli_query($connect, "INSERT INTO tbl_jabatan VALUES ('$p_id_jabatan','$p_jabatan','$p_divisi','$p_npwp','$p_tgl_masuk')");
+						$q_tambah_jabatan 	= mysqli_query($connect, "INSERT INTO tbl_jabatan VALUES ('$p_id_jabatan','$p_jabatan','$p_divisi','$p_npwp','$p_tgl_masuk','$p_tgl_mulai_kontrak_1','$p_tgl_selesai_kontrak_1','$p_tgl_mulai_kontrak_2','$p_tgl_selesai_kontrak_2')");
 
 						$q_tambah_telp		= mysqli_query($connect, "INSERT INTO tbl_no_telp VALUES ('$p_id_telp','$p_no_telp','$p_no_hp')");		
 

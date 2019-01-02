@@ -207,6 +207,10 @@
                             $p_divisi       = $a_data_edit['nama_divisi'];
                             $p_npwp         = $a_data_edit['no_npwp']; 
                             $p_tgl_masuk    = $a_data_edit['tgl_masuk'];
+                            $p_tgl_mulai_kontrak_1 = $a_data_edit['tgl_mulai_kontrak_1'];
+                            $p_tgl_selesai_kontrak_1 = $a_data_edit['tgl_selesai_kontrak_1'];
+                            $p_tgl_mulai_kontrak_2 = $a_data_edit['tgl_mulai_kontrak_2'];
+                            $p_tgl_selesai_kontrak_2 = $a_data_edit['tgl_selesai_kontrak_2'];
                             $p_no_telp      = $a_data_edit['telp']; 
                             $p_no_hp        = $a_data_edit['hp'];
                             $p_status_peg   = $a_data_edit['nama_status']; 
@@ -234,6 +238,7 @@
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Profil</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Kelengkapan Dokumen</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Kelengkapan Data Diri</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#password" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Ubah Password</span></a> </li>
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content tabcontent-border">
@@ -299,6 +304,10 @@
                                                                       <i class="mdi mdi-phone user-profile-icon"></i>
                                                                       <a href="#"> <?php echo $p_no_hp; ?></a>
                                                                     </li><br>
+                                                                    <li class="m-top-xs">
+                                                                      <i class="mdi mdi-calendar user-profile-icon"></i>
+                                                                      <a href="#"> <?php echo tgl_indo($p_tgl_masuk); ?></a>
+                                                                    </li><br>
                                                                   </ul>
                                                                   <center>
                                                                       <a href="?view=edit-profil-pegawai&id=997386799hupa&name=pegaaplication&editPegawai&nip=<?php echo $id_daftar;?>" class="btn btn-outline-success" data-toggle="tooltip" title="Edit Data"><span class="fa fa-edit"></span></a>
@@ -352,6 +361,30 @@
                                                                 <div>
                                                                     <a href="#" class="m-b-0 font-medium p-0"> <?php echo $p_status_peg; ?> - <?php echo $p_status_kawin; ?></a>
                                                                     <span class="text-muted">Status Pegawai - Status Kawin</span>
+                                                                </div>
+                                                                <div class="ml-auto">
+                                                                    <div class="tetx-right">
+                                                                       <button type='button' class='close' data-dismiss='alert'><i class='ace-icon fa fa-times'></i>
+                                                                       </button> 
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex no-block card-body border-top alert">
+                                                                <div>
+                                                                    <a href="#" class="m-b-0 font-medium p-0"> <?php echo tgl_indo($p_tgl_mulai_kontrak_1); ?> - <?php echo tgl_indo($p_tgl_selesai_kontrak_1); ?></a>
+                                                                    <span class="text-muted">Tanggal Mulai Kontrak 1 - Tanggal Selesai Kontrak 1</span>
+                                                                </div>
+                                                                <div class="ml-auto">
+                                                                    <div class="tetx-right">
+                                                                       <button type='button' class='close' data-dismiss='alert'><i class='ace-icon fa fa-times'></i>
+                                                                       </button> 
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex no-block card-body border-top alert">
+                                                                <div>
+                                                                    <a href="#" class="m-b-0 font-medium p-0"> <?php echo tgl_indo($p_tgl_mulai_kontrak_2); ?> - <?php echo tgl_indo($p_tgl_selesai_kontrak_2); ?></a>
+                                                                    <span class="text-muted">Tanggal Mulai Kontrak 2 - Tanggal Selesai Kontrak 2</span>
                                                                 </div>
                                                                 <div class="ml-auto">
                                                                     <div class="tetx-right">
@@ -833,6 +866,39 @@
                                                     </table>
                                                 </div>
                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane  p-20" id="password" role="tabpanel">
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title m-b-0">Ubah Password <?php echo $p_nama; ?></h5><br>
+                                                    <form role="form" action="config_config_cs/ubah-password-con.php" method="POST" class="form-horizontal">
+                                                        <input type="hidden" name="id" value="<?php echo $nip; ?>">
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <label for="password" >Password Baru :</label>
+                                                                <input type="password" class="form-control" name="password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <label for="password" >Konfirmasi Password :</label>
+                                                                <input type="password" class="form-control" name="password2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-action">
+                                                            <div class="row">
+                                                                <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

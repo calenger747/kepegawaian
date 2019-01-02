@@ -32,6 +32,10 @@
 		$p_divisi	 	= $_POST['divisi'];
 		$p_npwp		 	= $_POST['npwp'];	
 		$p_tgl_masuk 	= $_POST['tgl_masuk'];
+		$p_tgl_mulai_kontrak_1 = $_POST['tgl_mulai_kontrak_1'];
+		$p_tgl_selesai_kontrak_1 = $_POST['tgl_selesai_kontrak_1'];
+		$p_tgl_mulai_kontrak_2 = $_POST['tgl_mulai_kontrak_2'];
+		$p_tgl_selesai_kontrak_2 = $_POST['tgl_selesai_kontrak_2'];
 		$p_no_telp	 	= $_POST['telp'];	
 		$p_no_hp	 	= $_POST['nohp'];
 		$p_status_peg 	= $_POST['status_pegawai'];	
@@ -53,7 +57,7 @@
 
 				$q_edit_alamat		= mysqli_query($connect, "UPDATE tbl_alamat set nama_jalan = '$p_nama_jalan', rt = '$p_rt', rw = '$p_rw', kelurahan = '$p_kelurahan', kecamatan = '$p_kecamatan', kota = '$p_kota', provinsi = '$p_provinsi', kode_pos = '$p_kode_pos' WHERE id_alamat = '$p_id_alamat' ");
 
-				$q_edit_jabatan		= mysqli_query($connect, "UPDATE tbl_jabatan set jabatan = '$p_jabatan', divisi = '$p_divisi', no_npwp = '$p_npwp', tgl_masuk = '$p_tgl_masuk' WHERE id_jabatan = '$p_id_jabatan' ");
+				$q_edit_jabatan		= mysqli_query($connect, "UPDATE tbl_jabatan set jabatan = '$p_jabatan', divisi = '$p_divisi', no_npwp = '$p_npwp', tgl_masuk = '$p_tgl_masuk', tgl_mulai_kontrak_1 = '$p_tgl_mulai_kontrak_1', tgl_selesai_kontrak_1 = '$p_tgl_selesai_kontrak_1', tgl_mulai_kontrak_2 = '$p_tgl_mulai_kontrak_2', tgl_selesai_kontrak_2 = '$p_tgl_selesai_kontrak_2' WHERE id_jabatan = '$p_id_jabatan' ");
 
 				$q_edit_telp		= mysqli_query($connect, "UPDATE tbl_no_telp set telp = '$p_no_telp', hp = '$p_no_hp' WHERE id_telp = '$p_id_telp' ");
 

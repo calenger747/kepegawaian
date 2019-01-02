@@ -126,6 +126,10 @@
             $nav                ="Referensi Bank Transfer";
             $ambil_halaman      ="reF/bank.php";
             $ambil_gambar       ="assets/images/favicon.png";
+    } elseif ($view == "lokasi") {
+            $nav                ="Referensi Lokasi";
+            $ambil_halaman      ="reF/lokasi.php";
+            $ambil_gambar       ="assets/images/favicon.png";
     } elseif ($view == "list-user") {
             $nav                ="List User";
             $ambil_halaman      ="user/user-list.php";
@@ -142,6 +146,34 @@
             $nav                ="Edit Profil Pegawai";
             $ambil_halaman      ="user/_data-pribadi/edit-pegawai.php";
             $ambil_gambar       ="assets/images/favicon.png";
+    }elseif ($view == "tambah-barang") {
+            $nav                ="Tambah Barang";
+            $ambil_halaman      ="inventory/tambah_barang.php";
+            $ambil_gambar       ="assets/images/favicon.png";
+    } elseif ($view == "inventory-barang") {
+            $nav                ="Inventory Barang";
+            $ambil_halaman      ="inventory/inventory_barang.php";
+            $ambil_gambar       ="assets/images/favicon.png";
+    } elseif ($view == "pengajuan-inventory-barang") {
+            $nav                ="Pengajuan Inventory Barang";
+            $ambil_halaman      ="inventory/pengajuan_barang.php";
+            $ambil_gambar       ="assets/images/favicon.png";
+    } elseif ($view == "peminjaman-barang") {
+            $nav                ="Peminjaman Barang";
+            $ambil_halaman      ="inventory/peminjaman_barang.php";
+            $ambil_gambar       ="assets/images/favicon.png";
+    } elseif ($view == "detail-barang") {
+            $nav                ="Detail Barang";
+            $ambil_halaman      ="inventory/detail_barang.php";
+            $ambil_gambar       ="assets/images/favicon.png";
+    } elseif ($view == "peminjaman-barang") {
+        $nav                ="Peminjaman Barang";
+        $ambil_halaman      ="inventory/peminjaman_barang.php";
+        $ambil_gambar       ="assets/images/favicon.png";
+    } elseif ($view == "peminjaman") {
+        $nav                ="Peminjaman Barang";
+        $ambil_halaman      ="inventory/peminjaman.php";
+        $ambil_gambar       ="assets/images/favicon.png";
     } else {
             $nav                ="Dashboard";
             $ambil_halaman      ="home.php";

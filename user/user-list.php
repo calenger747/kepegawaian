@@ -215,6 +215,7 @@
                                                     <div class="border-top">
                                                         <div class="card-body">
                                                             <input type="submit" name="simpan_edit" class="btn btn-primary" value="SIMPAN">
+                                                            <a href="config_config_cs/del-user-con.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" style="float: right;">Delete User</a>
                                                         </div>
                                                     </div>
                                                 </div>

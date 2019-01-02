@@ -4,9 +4,9 @@
  * ----------------------------*/
 
 $dbhost = 'localhost'; 
-$dbuser = 'root';     // ini berlaku di xampp
-$dbpass = '';         // ini berlaku di xampp
-$dbname = 'db_pegawai';
+$dbuser = 'k0762615_pegawai';     // ini berlaku di xampp
+$dbpass = 'PegawaiLrcom123!@#';         // ini berlaku di xampp
+$dbname = 'k0762615_pegawai_1';
 
 // melakukan koneksi ke database
 $connect = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
